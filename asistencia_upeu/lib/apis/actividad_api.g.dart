@@ -13,7 +13,7 @@ class _ActividadApi implements ActividadApi {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'http://192.168.1.46:8090';
+    baseUrl ??= 'http://172.22.1.24:8090';
   }
 
   final Dio _dio;
@@ -75,7 +75,7 @@ class _ActividadApi implements ActividadApi {
   }
 
   @override
-  Future<ActividadModelo> findActividad(
+  Future<ActividadModelo> findActivdad(
     String token,
     int id,
   ) async {

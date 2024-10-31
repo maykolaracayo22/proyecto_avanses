@@ -1,25 +1,36 @@
 
 
+import 'package:floor/floor.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
+@Entity(tableName: "actividad")
+
 class ActividadModelo {
+  @primaryKey
 
   late  int id=0;
+  @ColumnInfo(name: "nombre_actividad")
+
   late final String nombreActividad;
   late final String fecha;
   late final String horai;
+  @ColumnInfo(name: "min_toler")
   late final String minToler;
   late final String latitud;
   late final String longitud;
   late final String estado;
   late final String evaluar;
+  @ColumnInfo(name: "user_create")
   late final String userCreate;
   late final String mater;
+  @ColumnInfo(name: "valid_insc")
   late final String validInsc;
+  @ColumnInfo(name: "asis_subact")
   late final String asisSubact;
   late final String entsal;
   late final String offlinex;
+  @ignore
   late List<AsistenciaxRModelo> asistenciaxs=[];
 
   ActividadModelo({

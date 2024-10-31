@@ -33,9 +33,7 @@ class MainActividad extends StatelessWidget {
     );*/
     return MultiProvider(
       providers: [
-        Provider<ActividadApi>(
-          create: (_) => ActividadApi.create(),
-        ),
+        Provider<ActividadApi>(create: (_) => ActividadApi.create(),),
         // Provider<AsistenciaxApi>(create: (_) => AsistenciaxApi.create(),),
       ],
       child: MaterialApp(
@@ -87,8 +85,7 @@ class _ActividadUIState extends State<ActividadUI> {
     print("entro aqui");
   }
 
-  final GlobalKey<AnimatedFloatingActionButtonState> key =
-      GlobalKey<AnimatedFloatingActionButtonState>();
+  final GlobalKey<AnimatedFloatingActionButtonState> key = GlobalKey<AnimatedFloatingActionButtonState>();
 
   String text = 'Asistencia';
   String subject = '';

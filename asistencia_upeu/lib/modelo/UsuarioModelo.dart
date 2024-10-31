@@ -3,6 +3,16 @@ import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
 class UsuarioModelo {
+  late final String nombres;
+  late final String apellidos;
+  late final String correo;
+  late final String password;
+  late final String token;
+  late final String dni;
+  late final String perfilPrin;
+  late final String estado;
+  late final String offlinex;
+
   UsuarioModelo({
     required this.nombres,
     required this.apellidos,
@@ -18,15 +28,7 @@ class UsuarioModelo {
   UsuarioModelo.login(this.correo, this.password):nombres="", apellidos="",token="",dni="", perfilPrin="",estado="", offlinex="";
   UsuarioModelo.loginDos(this.correo, this.password):nombres="", apellidos="";
 
-  late final String nombres;
-  late final String apellidos;
-  late final String correo;
-  late final String password;
-  late final String token;
-  late final String dni;
-  late final String perfilPrin;
-  late final String estado;
-  late final String offlinex;
+
 
   factory UsuarioModelo.fromJson(Map<String, dynamic> json){
     return UsuarioModelo(
